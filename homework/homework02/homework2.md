@@ -1,4 +1,4 @@
-#### What is a computer system?
+####- What is a computer system?
 A computer system is a set of components that all work together to complete a task
 
 ####-What are some of the parts of a computer system?
