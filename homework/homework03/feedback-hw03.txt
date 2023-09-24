@@ -1,0 +1,112 @@
+
+
+Evaluation Criteria ~ homework03
+CMSI 2210 Section 01 Fall 2023
+=================================
+CONVERSIONS
+
+Problems "C-level"
+=================
+   Question 01      1/1 pt.
+   Question 02      1/1 pt.
+   Question 03      1/1 pt.
+   Question 04      1/1 pt.
+   Question 05      1/1 pt.
+   Question 06      1/1 pt.
+   Question 07      1/1 pt.
+   Question 08      1/1 pt.
+   Question 09      1/1 pt.
+   Question 10      1/1 pt.
+   Question 11      1/1 pt.
+   Question 12      1/1 pt.
+   Question 13      1/1 pt.
+   Question 14      1/1 pt.
+   Question 15      0/1 pt.   nope!
+   Question 16      1/1 pt.
+   Question 17      1/1 pt.
+   Question 18      1/1 pt.
+   Question 19      1/1 pt.
+   Question 20      0/1 pt.   nope!
+   Question 21      1/1 pt.
+   Question 22      1/1 pt.
+
+
+Problems "B-level"
+=================
+   Question  01     0/1 pt.   nope!
+   Question  02     0/1 pt.   nope!
+   Question  03     0/1 pt.   nope!
+   Question  04     0/1 pt.   nope!
+   Question  05     1/1 pt.
+   Question  06     1/1 pt.
+   Question  07     1/1 pt.
+   Question  08     1/1 pt.
+   Question  09     1/1 pt.
+   Question  10     1/1 pt.
+   Question  11     1/1 pt.
+   Question  12     1/1 pt.   should use 16 bits in the answer
+   Question  13     0/1 pt.   nope!
+   Question  14     0/1 pt.   nope!
+   Question  15     1/1 pt.
+   Question  16     1/1 pt.
+
+
+Problems "A-level"
+=================
+   Question  01     1/1 pt.
+   Question  02     1/1 pt.
+   Question  03     0/1 pt.   nope!
+   Question  04     1/1 pt.
+   Question  05     0/1 pt.   nope!
+   Question  06     0/1 pt.   nope!
+   Question  07     0/1 pt.   nope!
+   Question  08   for fun only!
+
+Total possible points 45
+
+========================================================
+TOTAL EARNED POINTS:
+   You earned 20/22 for the "C-level"
+   you earned 10/16 for the "B-level"
+   You earned  3/ 7 for the "A-level"
+
+========================================================
+SPECIFIC COMMENTS/FEEDBACK:
+
+on "C-level" #15, you're close but not correct.  Check your math for the
+2^4 through 2^11 values.
+
+on "C-level" #20, look at the result for #19 and think about what "saturated
+addition" means.
+
+on "B-level" #1, think about what happens to the carry in modular addition.
+
+on "B-level" #2, how can you have a saturated sum that is less than either
+of the two numbers being added?
+
+on "B-level" #3 and #4, think about what carry and overflow indicate.  Look
+at problem #1 for a clue.
+
+on "B-level" #12, you should pad the result value with leading zeros to make
+it 32 bits
+
+on "B-level" #13 and #14, '32-bit float' means IEEE-754
+
+on "A-level" #3, try using the converter on web page at:
+         https://www.h-schmidt.net/FloatConverter/IEEE754.html
+
+on "A-level" #5, try converting 2^90 to decimal then multiplying to start
+
+on "A-level" #6, try converting 2^-138 to decimal then converting that
+
+on "A-level" #7, try using the converter page above
+
+========================================================
+FIRST PASS OUTCOME:
+
+Currently, because you didn't all correct in any section you have a fail on
+the assignment.
+
+Make your corrections and re-submit to your repo by Thursday, September 28th.
+You'll get full credit for the highest section's value that has 100% correct
+answers.
