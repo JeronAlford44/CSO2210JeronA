@@ -49,10 +49,10 @@ A-level Problems
 Complete all the C-level AND B-level problems plus the following:
 The largest finite IEEE-754 single precision float, in hex is: 0x7F7FFFFF
 The smallest finite IEEE-754 single precision float, in hex is: 0x00800000
-The largest nonzero negative IEEE-754 single precision float, in hex is: 0x7F800000
-The smallest nonezero positive IEEE-754 single precision float, in hex is:0x00000001
--5.125 X 290 as a 32-bit float, in hex is: OVERFLOW
-2-138 as a 32-bit float, in hex is: 0x00000001
-1.5 X 2-143 as a 32-bit float, in hex is: 0x00000000
+The largest nonzero negative IEEE-754 single precision float, in hex is:  0x80000001 (largest meaning value closest to 0)
+The smallest nonezero positive IEEE-754 single precision float, in hex is:0x00000001 (value closest to 0)
+-5.125 X 2^90 as a 32-bit float, in hex is: 0xeda40000
+2^-138 as a 32-bit float, in hex is: 0x00000800
+1.5 X 2^-143 as a 32-bit float, in hex is: 0x00000060
 OPTIONAL — Try this for a challenge, a puzzle, or the experience:
 Hex C059000000000000, when iterpreted as an IEEE-754 pattern, is in decimal:
