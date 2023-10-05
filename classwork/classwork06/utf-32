@@ -1,0 +1,26 @@
+Define just the needed letters, load right load right load right... 
+
+
+C0000005   JMP         start       ; jump to start of the program
+00000000   fib1:  0                ; First Fibonacci number
+00000001   fib2:  1                ; Second Fibonacci number
+00000002   count: 0                ; Counter for Fibonacci numbers
+
+start:   
+34000000       LOAD    fib1        ; load value of 'fib1' into accumulator
+300000FF       WRITE   255         ; output value of accumulator to port 255
+14000001       LOAD    fib2        ; load value of 'fib2' into accumulator
+40000000       ADD     fib1        ; add 'fib1' to get next Fibonacci number
+10000000       STORE   fib1        ; store the result in 'fib1'
+14000001       LOAD    fib2        ; load value of 'fib2' (former Fibonacci number)
+10000001       STORE   fib1        ; store it in 'fib1' as it's now the previous number
+14000000       LOAD    fib1        ; load the result from 'fib1' (current Fibonacci number)
+10000001       STORE   fib2        ; store it in 'fib2' as it's the new value
+
+40000002       ADD     count       ; increment the counter
+10000002       STORE   count       ; store incremented counter
+
+5000000A       SUB     10          ; compare counter with 10
+E0000003       JLZ     start       ; if we've not reached 10 Fibonacci numbers, loop back to start
+C0000015       JMP     end         ; end the program
+
