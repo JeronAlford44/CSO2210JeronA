@@ -21,22 +21,22 @@ Problems "C-level"
    Question 12      1/1 pt.
    Question 13      1/1 pt.
    Question 14      1/1 pt.
-   Question 15      0/1 pt.   nope!
+   Question 15      0/1 pt.   Corrected
    Question 16      1/1 pt.
    Question 17      1/1 pt.
    Question 18      1/1 pt.
    Question 19      1/1 pt.
-   Question 20      0/1 pt.   nope!
+   Question 20      0/1 pt.   Corrected
    Question 21      1/1 pt.
    Question 22      1/1 pt.
 
 
 Problems "B-level"
 =================
-   Question  01     0/1 pt.   nope!
-   Question  02     0/1 pt.   nope!
-   Question  03     0/1 pt.   nope!
-   Question  04     0/1 pt.   nope!
+   Question  01     0/1 pt.   Corrected
+   Question  02     0/1 pt.   Corrected
+   Question  03     0/1 pt.   Corrected
+   Question  04     0/1 pt.   Corrected
    Question  05     1/1 pt.
    Question  06     1/1 pt.
    Question  07     1/1 pt.
@@ -44,9 +44,9 @@ Problems "B-level"
    Question  09     1/1 pt.
    Question  10     1/1 pt.
    Question  11     1/1 pt.
-   Question  12     1/1 pt.   should use 16 bits in the answer
-   Question  13     0/1 pt.   nope!
-   Question  14     0/1 pt.   nope!
+   Question  12     1/1 pt.   Corrected
+   Question  13     0/1 pt.   Corrected
+   Question  14     0/1 pt.   Corrected
    Question  15     1/1 pt.
    Question  16     1/1 pt.
 
@@ -104,9 +104,27 @@ on "A-level" #7, try using the converter page above
 ========================================================
 FIRST PASS OUTCOME:
 
-Currently, because you didn't all correct in any section you have a fail on
-the assignment.
+Currently, because you didn't get all correct in any section you have a fail
+on the assignment.
 
 Make your corrections and re-submit to your repo by Thursday, September 28th.
 You'll get full credit for the highest section's value that has 100% correct
 answers.
+
+========================================================
+SECOND PASS OUTCOME:
+
+All "C" level and "B" level problems corrected.  No "A" level problems were
+revised.
+
+Revised result is a "B" on the assignment.
+
+========================================================
+FINAL PASS OUTCOME:
+
+Combining all levels into one assignment.
+
+Total of 45 problems.
+
+You earned 41/45 which is 91.11% which is an A-minus.
+
