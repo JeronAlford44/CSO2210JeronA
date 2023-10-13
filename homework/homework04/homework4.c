@@ -40,7 +40,35 @@ f)value &= 0xFFFFFFF8;
 5)
 
 
+6)
 
+JMP             Start
+
+number1: 0
+number2: 0
+divisor: 0
+
+start: READ       0x100
+       STORE      number1
+       READ       0x100
+       STORE      number2
+       ADD        0x01
+       STORE      divisor
+
+gcd:   LOAD       divisor
+       SUB        0x01
+       STORE      divisor
+       LOAD       number1
+       MOD        divisor
+       JLZ        gcd
+       JGZ        gcd
+       LOAD       number2
+       MOD        divisor
+       JLZ        gcd
+       JGZ        gcd
+       LOAD       divisor
+       WRITE      0x200
+       
 7)
 
 
