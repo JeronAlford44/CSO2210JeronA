@@ -91,6 +91,16 @@ gcd:   LOAD       divisor
        WRITE      0x200
        
 7)
+       JMP     start   ; jump to start
+ v1: 0                  ; temp variables for values
+ v2: 0                  ; 
+ start: STORE   v1      ; put value of accumulator to v1
+        LOAD    0x30AA  ; load address 0x30AA to accumulator
+        STORE   v2      ; put value of address to v2
+        LOAD    v1      ; load v1 back to accumulator
+        WRITE   0x30AA  ; write accumulator value to memory address
+        LOAD    v2      ; load value of mem address to v2
+
 
 
 
