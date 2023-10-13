@@ -35,9 +35,30 @@ e)value ^= 0xC0000000;
 f)value &= 0xFFFFFFF8;
 
 4)
+ JMP     start   ;jump to start
+ count: 0               ; initialize count
+ limit: 256             ; set limit to 256 to write all values 0-255
+ start: LOAD count      ; bring the value into accumulator to use
+        WRITE   0x64     ; output the current count to port 8
+        ADD     0x01    ; add 1 to count
+        STORE   count   ; store current value of count
+        SUB     limit   ; gets limit - accumulator value
+        JZ     start   ; loop until limit - accumulator value == 0
+   end: JUMP    end     ; end of program
+
 
 
 5)
+   C0000003
+   00000000
+   000000FF
+   00000001
+   30000008
+   40000002
+   10000001
+   50000003 
+   D0000004
+   C0000009
 
 
 6)
