@@ -1,0 +1,67 @@
+
+
+Evaluation Criteria ~ homework04
+CMSI 2210 Section 01 Fall 2023
+=================================
+
+LOGIC DESIGN
+   Logic Question 1a       0/10 pts.
+   Logic Question 1b        0/5 pts.
+   Logic Question 2        0/10 pts.
+
+LOGIC DESIGN
+   Logic Question 1a       0/10 pts.
+   Logic Question 1b        0/5 pts.
+   Logic Question 2        0/10 pts.
+
+REGISTER OPERATIONS
+   Register clear even      2/2 pts.
+   Register set last 3      1/2 pts.
+   Reg./8 remainder         1/2 pts.
+   Reg. set to -1           1/2 pts.
+   Reg. invert 2 MSBs       1/2 pts.
+   Register computation     2/2 pts.
+
+STANLEY/PENGUIN ASSEMBLY
+   Q4 - program 1a        11/11 pts.
+   Q5 - program 1b        11/11 pts.
+   Q6 - GCD prog.          9/11 pts.
+   Q7 - swap frag           5/5 pts.
+   Q8 - jmp to addr         5/5 pts.
+
+REGISTER INVESTIGATION
+   Q9a - high level expl.   5/5 pts.
+   Q9b - Why?               5/5 pts.
+
+
+Total possible points     59/90 points
+
+========================================================
+
+TOTAL EARNED POINTS:
+   you earned 59.0/ 90.0 which is 65.56% which is a D
+
+========================================================
+SPECIFIC COMMENTS/FEEDBACK:
+
+on #1 there should be two different equations for X and Y and your current answer is wrong
+
+on #2 you need an output and the circuit is not correct, should only be 4 inputs
+
+on #3 specify what logical operator you are using, like for d say "OR the value with 0xFFFFFFFF"
+
+on #6 you need a JMP end to end the program
+
+Good job!
+
+========================================================
+SEMESTER SCORE SO FAR:
+
+   homework01 ~ 100.00% of  5 points =  5.00 points
+   homework02 ~ 100.00% of  5 points =  5.00 points
+   homework03 ~ 100.00% of  5 points =  5.00 points
+   homework04 ~ 100.00% of  5 points =  5.00 points
+                                total: 20.00 out of 20.0 = 100.00%
+                                which is an A-plus
+
+Keep up the good work!
