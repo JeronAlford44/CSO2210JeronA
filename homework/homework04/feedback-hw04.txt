@@ -5,52 +5,55 @@ CMSI 2210 Section 01 Fall 2023
 =================================
 
 LOGIC DESIGN
-   Logic Question 1a       0/10 pts.
-   Logic Question 1b        0/5 pts.
-   Logic Question 2        0/10 pts.
-
-LOGIC DESIGN
-   Logic Question 1a       0/10 pts.
-   Logic Question 1b        0/5 pts.
-   Logic Question 2        0/10 pts.
+   Logic Question 1a          5 pts.
+   Logic Question 1b          3 pts.
+   Logic Question 2           5 pts.
 
 REGISTER OPERATIONS
-   Register clear even      2/2 pts.
-   Register set last 3      1/2 pts.
-   Reg./8 remainder         1/2 pts.
-   Reg. set to -1           1/2 pts.
-   Reg. invert 2 MSBs       1/2 pts.
-   Register computation     2/2 pts.
+   Register clear even        1.5 pts.
+   Register set last 3        1.5 pts.
+   Reg./8 remainder           1.5 pts.
+   Reg. set to -1             1.5 pts.
+   Reg. invert 2 MSBs         1.5 pts.
+   Register computation       1.5 pts.
 
 STANLEY/PENGUIN ASSEMBLY
-   Q4 - program 1a        11/11 pts.
-   Q5 - program 1b        11/11 pts.
-   Q6 - GCD prog.          9/11 pts.
-   Q7 - swap frag           5/5 pts.
-   Q8 - jmp to addr         5/5 pts.
+   Q4 - program 1a           11 pts.
+   Q5 - program 1b           11 pts.
+   Q6 - GCD prog.             9 pts.
+   Q7 - swap frag             5 pts.
+   Q8 - jmp to addr           5 pts.
 
 REGISTER INVESTIGATION
-   Q9a - high level expl.   5/5 pts.
-   Q9b - Why?               5/5 pts.
+   Q9a - high level expl.     5 pts.
+   Q9b - Why?                 5 pts.
 
 
-Total possible points     59/90 points
+Total possible points        90 points
 
 ========================================================
 
 TOTAL EARNED POINTS:
-   you earned 59.0/ 90.0 which is 65.56% which is a D
+   you earned 73.0/ 90.0 which is 81.11% which is a B-minus
 
 ========================================================
 SPECIFIC COMMENTS/FEEDBACK:
 
-on #1 there should be two different equations for X and Y and your current answer is wrong
+On problem #1, you were supposed to find four equations, two for X and Y
+using AND/OR/NOT gates and two for X and Y using only NAND gates.
 
-on #2 you need an output and the circuit is not correct, should only be 4 inputs
+On problem #2, this circuit will not work since it won't produce the truth
+table outputs required.  For example, you have ANDed a1 and b1, which will
+produce a "1" output where it should be a "0" in rows 11 and 16 of the
+truth table.
 
-on #3 specify what logical operator you are using, like for d say "OR the value with 0xFFFFFFFF"
+On problem #3, your solution is programmatic, not simple logic instructions.
+True, the program version you submitted is *similar* to what is being asked,
+but not quite the "logical operation" solution required.  For example, your
+answer for 3A should be simply "AND 0xAAAAAAAA" not the "&=" you have used.
 
-on #6 you need a JMP end to end the program
+On problem #6, this is pretty close, but doesn't quite work.  You start off
+with a potential zero for the divisor.  Otherwise, this is pretty good!
 
 Good job!
 
@@ -59,9 +62,9 @@ SEMESTER SCORE SO FAR:
 
    homework01 ~ 100.00% of  5 points =  5.00 points
    homework02 ~ 100.00% of  5 points =  5.00 points
-   homework03 ~ 100.00% of  5 points =  5.00 points
-   homework04 ~ 100.00% of  5 points =  5.00 points
-                                total: 20.00 out of 20.0 = 100.00%
-                                which is an A-plus
+   homework03 ~  91.11% of  5 points =  4.56 points
+   homework04 ~  81.11% of  5 points =  4.06 points
+                                total: 18.62 out of 20.0 = 93.08%
+                                which is an A
 
 Keep up the good work!
