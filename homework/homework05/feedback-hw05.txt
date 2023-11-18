@@ -42,8 +42,10 @@ SEMESTER SCORE SO FAR:
 
    homework01 ~ 100.00% of  5 points =  5.00 points
    homework02 ~ 100.00% of  5 points =  5.00 points
-   homework03 ~ 100.00% of  5 points =  5.00 points
-   homework04 ~ 100.00% of  5 points =  5.00 points
+   homework03 ~  91.11% of  5 points =  4.56 points
+   homework04 ~  81.11% of  5 points =  4.06 points
    homework05 ~ 100.00% of 10 points = 10.00 points
-                                total: 30.00 out of 30.00 = 100.00%
-                                which is an A-plus
+                                total: 28.62 out of 30.00 = 95.40%
+                                which is a solid A
+
+You're doing great on this homework stuff!  Keep it up!
