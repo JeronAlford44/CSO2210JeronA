@@ -1,37 +1,41 @@
+;  gcc -no-pie wrapper.o makeNBON.o makeNBOC.o -o makeNBON
+;  nasm -f elf64 -o makeNBON.o makeNBON.nasm
+;  ./makeNBON
+
+
 section .data
     test_values dd 0x12345678, 0xAABBCCDD, 0x87654321, 0x0F1E5D3C, 0xDEADBEEF
     num_tests   equ 5
-    format db "Result: 0x%x", 10, 0  ; Format string for printf, 10 is new line, 0 is null terminator
+    format db "Result: 0x%x", 10, 0  ; Format string for printf
 
 section .text
-    global _start
+    global assembly_main
     extern printf
     extern make_network_byte_order
 
-_start:
-    mov rsi, test_values     ; Makes Pointer to the test values array of DoubleWords
-    mov rcx, num_tests       ; Number of test values
+assembly_main:
+    sub rsp, 8              ; Align stack to 16 bytes
+    mov rsi, test_values    ; Pointer to test values array
+    mov rcx, num_tests      ; Number of test values
 
 loop_start:
-    mov eax, [rsi]           ; Load the next test value into EAX
-    sub rsp, 8               ; Move stack pointer down to allocate for 8 byte function address 
-    mov qword [rsp], rax     ; Move the value onto the stack for the function call
+    mov eax, [rsi]          ; Load test value into EAX
+    mov edi, eax            ; Move value to EDI for make_network_byte_order
     call make_network_byte_order
-    add rsp, 8               ; Clean up the stack to realign to a 16-byte boundary
+    ; No need to adjust rsp if we're not pushing to stack
 
-    ; Print the result
-    sub rsp, 32              ; Allocate stack space and align stack 10 bytes for string 4 bytes for double word 8 bytes printf function call = 22 bytes --> lowest multiple of 16 is 32
-    mov rdi, format          ; Move format string into RDI (first argument for printf)
-    mov rsi, rax             ; Move the result into RSI (second argument for printf)
-    mov rax, 0               ; Set number of floating point parameters in XMM registers to 0
+    ; Prepare to call printf
+    mov rdi, format         ; Format string
+    mov rsi, rax            ; Result to print
+    xor eax, eax            ; Clear eax (number of floating point params)
     call printf
-    add rsp, 32              ; Clean up the stack
 
-    add rsi, 4               ; Move to the next value
-    dec rcx                  ; Decrement the loop counter
-    jnz loop_start           ; If counter is not zero, loop again
+    add rsi, 4              ; Move to the next value
+    dec rcx                 ; Decrement loop counter
+    jnz loop_start          ; Loop if not zero
 
-    ; Exit the program
-    mov eax, 60              ; System call number for exit
-    xor edi, edi             ; Exit code 0
+    ; Exit
+    add rsp, 8              ; Realign original stack
+    mov eax, 60             ; Exit syscall
+    xor edi, edi            ; Exit code 0
     syscall

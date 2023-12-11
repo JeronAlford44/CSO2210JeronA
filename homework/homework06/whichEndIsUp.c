@@ -1,3 +1,7 @@
+// gcc -o whichEndIsUp whichEndIsUp.c
+// ./whichEndIsUp
+
+
 #include <stdio.h>
 
 int main() {
