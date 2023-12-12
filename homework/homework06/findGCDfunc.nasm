@@ -1,5 +1,5 @@
 section .text
-    global find_gcd
+    global _find_gcd
 
 ; The GCD function
 ; Arguments:
@@ -7,7 +7,7 @@ section .text
 ;   rsi - second number
 ; Returns:
 ;   rax - GCD of rdi and rsi
-find_gcd:
+_find_gcd:
     mov rax, rdi      ; Move first number to rax register
     mov rbx, rsi      ; Move second number to rbx register
     test rbx, rbx     ; Check if second number is 0, sets zero flag to 1 if true

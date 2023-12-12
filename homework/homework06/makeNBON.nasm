@@ -4,11 +4,11 @@ section .data
     format db "Result: 0x%x", 10, 0  ; Format string for printf, 10 is new line, 0 is null terminator
 
 section .text
-    global _start
-    extern printf
-    extern make_network_byte_order
+    global _main
+    extern _printf
+    extern _make_network_byte_order
 
-_start:
+_main:
     mov rsi, test_values     ; Makes Pointer to the test values array of DoubleWords
     mov rcx, num_tests       ; Number of test values
 
@@ -16,7 +16,7 @@ loop_start:
     mov eax, [rsi]           ; Load the next test value into EAX
     sub rsp, 8               ; Move stack pointer down to allocate for 8 byte function address 
     mov qword [rsp], rax     ; Move the value onto the stack for the function call
-    call make_network_byte_order
+    call _make_network_byte_order
     add rsp, 8               ; Clean up the stack to realign to a 16-byte boundary
 
     ; Print the result
@@ -24,7 +24,7 @@ loop_start:
     mov rdi, format          ; Move format string into RDI (first argument for printf)
     mov rsi, rax             ; Move the result into RSI (second argument for printf)
     mov rax, 0               ; Set number of floating point parameters in XMM registers to 0
-    call printf
+    call _printf
     add rsp, 32              ; Clean up the stack
 
     add rsi, 4               ; Move to the next value

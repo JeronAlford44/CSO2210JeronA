@@ -1,0 +1,91 @@
+
+
+Evaluation Criteria ~ homework06
+CMSI 2210 Section all Fall 2023
+=================================
+
+FINDGCD.NASM
+   nasm file assembles  [3 pts.]
+   nasm runs            [0 pts.]
+   output correct       [2 pts.]
+GCDFINDER
+   nasm file assembles  [4 pts.]
+   gcdFinder.c compiles [5 pts.]
+   link both files OK   [5 pts.]
+   nasm returns value   [5 pts.]
+   output correct       [3 pts.]
+PARITYGEN
+   nasm file assembles  [4 pts.]
+   nasm runs            [0 pts.]
+   output correct       [2 pts.]
+WHICHENDISUP
+   compiles no errors   [5 pts.]
+   runs no errors       [5 pts.]
+MAKENBOC.C
+   compiles no errors   [4 pts.]
+   uses previous func.  [5 pts.]
+   tester compiles      [5 pts.]
+   tester runs          [5 pts.]
+   output correct       [3 pts.]
+MAKENBO.NASM
+   nasm file assembles  [4 pts.]
+   link all files OK    [5 pts.]
+   calls "C" function   [5 pts.]
+   output correct       [2 pts.]
+
+Total possible points 100
+
+========================================================
+
+TOTAL EARNED POINTS:
+   you earned 83.00/100.00 which is 83% which is a B
+
+========================================================
+SPECIFIC COMMENTS/FEEDBACK:
+
+I don't see where you have put a header in some of the code files so that I
+   know how to build the programs.  Because of that, I'll do my best to get
+   things working, but at this point, if it doesn't build, you get what you
+   get....  sorry.....
+
+problem 1 findGCD: got two assembler errors that 64-bit format doesn't
+   support 32-bit addresses.  You need to have a "default rel" in your code
+   next to the global and externs.  I put that in and now it assembles.
+   However, you also need to have underscore characters in front of the main
+   and the "C" functions ~ I get linker errors from gcc without them.  Now I
+   get a warning for "no_pie", and when I run it gets a seg fault.
+
+problem 2 gcdFinder & findGCDfunc: findGCDfunc assembles fine and gcdFinder
+   compiles fine, but linking with gcc caused an error.  The linker can't
+   find "_find_gcd", again because you don't have the underscore.  I fixed
+   that for you and now it links and runs.  It gets the right answer, but
+   it also gets a seg fault at the end.  No harm no foul on that one.
+
+problem 3 paritygen: Jeezo.... same problem here!  Fixed it for you.  Also,
+   you need "_main" for linking with gcc, not "_start".  Fixed that, too.
+   Now it assembles and links, but running it gets a seg fault before there
+   is any output.
+
+problem 4 whichEndIsUp: perfect.
+
+problem 5 makeNBOC & makeNBOCtest: perfect.
+
+problem 6 makeNBON & makeNBOC: added underscores again for you.  Also, the
+   "_main" vs. "_start" thing.  Fixed that for you.  And of course, it gets
+   a seg fault.
+
+========================================================
+SEMESTER HOMEWORK TOTALS:
+
+   homework01 ~ 100.00% of  5 points =  5.00 points
+   homework02 ~ 100.00% of  5 points =  5.00 points
+   homework03 ~  91.11% of  5 points =  4.56 points
+   homework04 ~  81.11% of  5 points =  4.06 points
+   homework05 ~ 100.00% of 10 points = 10.00 points
+   homework06 ~  83.00% of 15 points = 12.45 points
+                       semester total: 41.07 out of 45.00 = 91.27%
+                             which is an A-minus
+
+Great work on all these assignments!  It's been a pleasure having all three
+of you in class... have an excellent break!
+

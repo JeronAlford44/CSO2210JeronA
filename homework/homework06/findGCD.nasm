@@ -6,16 +6,19 @@ section .data
 section .bss
     result resq 1      ; Space for the GCD result
 
-section .text
-    global main
-    extern scanf, printf
+; section .text
+    global _main
+    extern _scanf, _printf
+    default rel
 
-main:
+section .text
+
+_main:
     ; Prompt user for input
     mov rdi, format    ; Format string for scanf
     mov rsi, num1      ; Address of num1
     mov rdx, num2      ; Address of num2
-    call scanf         ; Call scanf to read two numbers
+    call _scanf         ; Call scanf to read two numbers
 
     ; Load numbers into registers
     mov rax, [num1]
@@ -27,12 +30,13 @@ main:
     ; Print result
     mov rdi, format    ; Format string for printf
     mov rsi, rax       ; GCD result
-    call printf        ; Call printf to print the result
+    call _printf        ; Call printf to print the result
 
     ; Exit
-    mov rax, 60        ; System call number for exit
-    xor rdi, rdi       ; Exit code 0
-    syscall
+;    mov rax, 60        ; System call number for exit
+;    xor rdi, rdi       ; Exit code 0
+;    syscall
+    ret
 
 ; Function to calculate GCD
 gcd:

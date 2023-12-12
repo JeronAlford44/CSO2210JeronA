@@ -3,9 +3,9 @@ section .data
 output db "Parity is even: %d", 10, 0
 
 section .text
-extern printf
-extern exit
-global _start
+extern _printf
+extern _exit
+global _main
 
 ; Function to check the parity of a byte
 ; Input: AL = byte to check
@@ -15,7 +15,7 @@ check_parity:
     setp al        ; Set AL to 1 if parity flag is set (even parity), 0 otherwise
     ret
 
-_start:
+_main:
     mov al, 0x54     ; Load a byte value into AL
     call check_parity ; Check its parity
 
@@ -23,8 +23,8 @@ _start:
     mov esi, eax      ; Move the result to esi, which is the second argument for printf
     mov rdi, output   ; First argument (format string)
     xor eax, eax      ; Sets eax register to 0
-    call printf
+    call _printf
 
     ; Exit the program
     mov edi, 0        ; Exit code,  could use xor edi, edi
-    call exit
+    call _exit
