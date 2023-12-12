@@ -1,3 +1,10 @@
+;  nasm -f elf64 -o findGCDfunc.o findGCDfunc.nasm
+;  gcc -o gcdFinder gcdFinder.c findGCDfunc.o
+;  ./gcdFinder
+
+
+
+
 section .text
     global _find_gcd
 

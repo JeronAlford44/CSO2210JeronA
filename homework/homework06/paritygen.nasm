@@ -1,3 +1,8 @@
+;   nasm -f elf64 -o paritygen.o paritygen.nasm
+;   ld -o paritygen paritygen.o -lc -I/lib64/ld-linux-x86-64.so.2
+;   ./paritygen
+
+
 default rel
 section .data
 output db "Parity is even: %d", 10, 0
