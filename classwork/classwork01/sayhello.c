@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
     char input[25];
     printf("Please Enter your name: ");
              
-    if (gets(input)){
+    if (fgets(input, 25, stdin)){
         name = input;
         printf("Hello %s!\n", name);
         
